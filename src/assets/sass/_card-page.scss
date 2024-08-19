@@ -1,0 +1,354 @@
+.path-list {
+  display: flex;
+  column-gap: 6px;
+  color: $gray-text-color;
+  .path-item:last-child {
+    color: #7033ac;
+  }
+}
+.ditails {
+  .section-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 109px;
+    padding-top: 12px;
+    margin-bottom: 82px;
+    @media (max-width: 1326px) {
+      row-gap: 80px;
+      padding-top: 0;
+      margin-bottom: 70px;
+    }
+    @media (max-width: 1023px) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: 767px) {
+      margin-top: -7px;
+      margin-bottom: 66px;
+      row-gap: 16px;
+    }
+    picture {
+      @media (max-width: 1023px) {
+        width: 100%;
+      }
+    }
+    .product__img {
+      width: 624px;
+      @media (max-width: 1326px) {
+        width: 514px;
+        padding-top: 20px;
+      }
+      @media (max-width: 1023px) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .stars {
+      display: block;
+      margin-bottom: 6px;
+      padding-left: 22px;
+      font-size: 16px;
+      color: $firm-color-1;
+      background-image: url('../img/star.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      @media (max-width: 767px) {
+        margin-bottom: 4px;
+      }
+    }
+    .product__name {
+      margin-bottom: 5px;
+      font-weight: 400;
+      font-size: 24px;
+      @media (max-width: 767px) {
+        margin-bottom: 7px;
+        font-size: 16px;
+      }
+    }
+    .product__min-descr {
+      margin-bottom: 21px;
+      font-size: 14px;
+      color: $gray-text-color;
+      @media (max-width: 767px) {
+        margin-bottom: 17px;
+      }
+    }
+    .product__price {
+      display: block;
+      margin-bottom: 26px;
+      font-size: 36px;
+      @media (max-width: 767px) {
+        margin-bottom: 16px;
+        font-size: 24px;
+      }
+    }
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      max-width: 230px;
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+      .product__buy-btn {
+        @include btn-reset;
+        padding: 19px 35px;
+        border-radius: $radius;
+        font-size: 16px;
+        background-color: $firm-color-2;
+        color: $light-text-color;
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+      }
+      .product__buy-btn:focus {
+        background-color: #c998fb;
+        outline-offset: 0;
+      }
+      .product__buy-btn:hover {
+        background-color: #c998fb;
+      }
+      .product__buy-btn:active {
+        background-color: #7033ac;
+      }
+      .product__buy-btn:disabled {
+        background-color: #eaeaea;
+        color: #999999;
+      }
+      .product__cart-btn {
+        @include btn-reset;
+        font-size: 16px;
+        color: $firm-color-2;
+        transition: color 0.1s ease-in-out;
+        @media (max-width: 767px) {
+          padding-bottom: 15px;
+        }
+      }
+      .product__cart-btn:focus {
+        outline-offset: 0;
+      }
+      .product__cart-btn:hover {
+        color: #c998fb;
+      }
+      .product__cart-btn:active {
+        color: #7033ac;
+        outline: transparent;
+      }
+    }
+    .product__exstra-inform {
+      width: 49%;
+      @media (max-width: 1326px) {
+        width: 54%;
+      }
+      @media (max-width: 1023px) {
+        width: 85%;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      .product__subtitle {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .product__descr {
+        line-height: 180%;
+        margin-bottom: 105px;
+        @media (max-width: 1326px) {
+          margin-bottom: 90px;
+        }
+        @media (max-width: 1023px) {
+          margin-bottom: 40px;
+        }
+        @media (max-width: 767px) {
+          margin-bottom: 38px;
+        }
+      }
+      .product__shematic-img {
+        max-width: 526px;
+      }
+    }
+    .product__specList {
+      width: 43%;
+      @media (max-width: 1326px) {
+        width: 42%;
+      }
+      @media (max-width: 1023px) {
+        margin-top: -54px;
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        margin-top: 0;
+        padding-top: 12px;
+      }
+      .product__specItem {
+        display: flex;
+        justify-content: space-between;
+        background-image: url('../img/dots.svg');
+        background-repeat: repeat-x;
+        background-position: center;
+        @media (max-width: 767px) {
+          background-image: none;
+          flex-direction: column;
+          margin-bottom: 11px;
+        }
+        .spec-name {
+          line-height: 180%;
+          background-color: $light-text-color;
+          color: $gray-text-color;
+          @media (max-width: 767px) {
+            font-size: 10px;
+          }
+        }
+        .spec-value {
+          width: 220px;
+          line-height: 180%;
+          background-color: $light-text-color;
+          @media (max-width: 767px) {
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.similar {
+  &__title {
+    @include section-title;
+    font-size: 24px;
+  }
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+    @media (max-width: 1326px) {
+      overflow: scroll;
+    }
+    @media (max-width: 767px) {
+      gap: 15px;
+    }
+    .card {
+      position: relative;
+      padding: 17px 17px 30px 17px;
+      background-color: $gray-bg;
+      border-radius: $radius;
+      @media (max-width: 1326px) {
+        width: 296px;
+      }
+      @media (max-width: 767px) {
+        width: 140px;
+        padding: 16px;
+      }
+
+      .stars {
+        position: absolute;
+        top: $p-card;
+        left: $p-card;
+        padding-left: 22px;
+        font-size: 16px;
+        color: $firm-color-1;
+        background-image: url('../img/star.svg');
+        background-position: left center;
+        background-repeat: no-repeat;
+        @media (max-width: 767px) {
+          top: 16px;
+          left: 16px;
+          padding-left: 18px;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+      &__link {
+        display: block;
+        align-content: end;
+        padding-bottom: 13px;
+        padding-top: 40px;
+        max-width: 266px;
+        height: 190px;
+        @media (max-width: 767px) {
+          height: 86px;
+          padding-top: 20px;
+          margin-bottom: 4px;
+        }
+        .card__img {
+          object-fit: contain;
+          max-height: 125px;
+        }
+      }
+      &__name {
+        @include card-name;
+        padding-left: 12px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          padding-left: 0;
+        }
+      }
+      &__model {
+        @include card-name;
+        padding-left: 12px;
+        margin-bottom: 23px;
+        @media (max-width: 767px) {
+          margin-bottom: 17px;
+          font-size: 16px;
+          padding-left: 0;
+        }
+      }
+      .price {
+        display: block;
+        margin-bottom: 24px;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray-text-color;
+        @media (max-width: 767px) {
+          padding-left: 0;
+          margin-bottom: 14px;
+        }
+      }
+      .price-sale {
+        display: block;
+        margin-bottom: 23px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $firm-color-1;
+      }
+      .old-price {
+        margin-left: $p-card;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        text-decoration: line-through;
+        color: $gray-text-color;
+      }
+      &__btn {
+        margin-left: 12px;
+        padding: 16px 35px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid $firm-color-2;
+        border-radius: $radius;
+        color: $firm-color-2;
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        @media (max-width: 767px) {
+          margin-left: 0;
+          padding: 10px 23px;
+        }
+      }
+      &__btn:focus {
+        background-color: #c998fb;
+        outline-offset: 0;
+        color: $light-text-color;
+      }
+      &__btn:hover {
+        background-color: #a65cf0;
+        color: $light-text-color;
+      }
+      &__btn:active {
+        background-color: #7033ac;
+        color: $light-text-color;
+        outline: none;
+      }
+    }
+  }
+}

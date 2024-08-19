@@ -1,0 +1,125 @@
+.cooperation {
+  .section-container {
+    padding-right: 25%;
+    font-size: 16px;
+    @media (max-width: 1326px) {
+      padding-right: 15%;
+    }
+    @media (max-width: 1023px) {
+      padding-right: 72px;
+    }
+    @media (max-width: 767px) {
+      padding-right: 12px;
+      font-size: 14px;
+    }
+  }
+  &__title {
+    @include section-title;
+    margin-top: -4px;
+    margin-bottom: 34px;
+  }
+  &__subtitle {
+    margin-bottom: 14px;
+    font-weight: 400;
+    font-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  .provider-descr {
+    @include descr;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+  .cooperation__subtitle:nth-of-type(3) {
+    @media (max-width: 767px) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+  .bonus-list {
+    @include descr;
+    margin-bottom: 35px;
+    max-width: 627px;
+    .bonus-item {
+      padding-left: 37px;
+      line-height: 24px;
+      background-position: left top;
+      background-repeat: no-repeat;
+      @media (max-width: 767px) {
+        line-height: 21px;
+      }
+    }
+    .bonus-item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    .bonus-item:nth-child(1) {
+      background-image: url('../img/network.svg');
+    }
+    .bonus-item:nth-child(2) {
+      background-image: url('../img/briefcase.svg');
+    }
+    .bonus-item:nth-child(3) {
+      background-image: url('../img/git-pull-request.svg');
+    }
+  }
+  .advantages-list {
+    @include descr;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    .advantages-item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .advantages-item {
+      .advantages-subtitle {
+        display: block;
+        margin-bottom: 9px;
+        font-weight: 600;
+        color: $firm-color-1;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+  .guarantees-list {
+    @include descr;
+    margin-bottom: 32px;
+    padding-left: 15px;
+    @media (max-width: 767px) {
+      margin-bottom: 28px;
+    }
+    .guarantees-item::marker {
+      color: $firm-color-1;
+    }
+    .guarantees-item:not(:last-child) {
+      margin-bottom: 14px;
+      @media (max-width: 767px) {
+        margin-bottom: 11px;
+      }
+    }
+    .guarantees-item {
+      padding-left: 12px;
+    }
+  }
+  .guarantees-descr {
+    padding: 22px 0 22px 109px;
+    max-width: 624px;
+    font-size: 24px;
+    line-height: 150%;
+    background-image: url('../img/png/pencil.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      padding: 0 0 0 52px;
+      background-size: 36px 54px;
+    }
+  }
+}
