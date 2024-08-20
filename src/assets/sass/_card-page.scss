@@ -34,6 +34,8 @@
     }
     .product__img {
       width: 624px;
+      max-height: 400px;
+      object-fit: contain;
       @media (max-width: 1326px) {
         width: 514px;
         padding-top: 20px;
